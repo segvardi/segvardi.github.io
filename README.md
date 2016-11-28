@@ -1,0 +1,2 @@
+# segvards.github.io
+Segvārds
