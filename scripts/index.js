@@ -83,7 +83,7 @@ function createNewGame() {
 		var word = sessionData[randomNumber];
 		removeItem(sessionData, randomNumber);
 		wordsSelected.push(word);
-		trs[i % 5] += "<div class=\"word\" id=\'" + i + "\' onclick=\"clicked(\'" + i + "\')\"><div><a href=\"#\"><span class=\"ada\"></span>" + word + "</a></div></div>";
+		trs[i % 5] += "<div class=\"word\" id=\'" + i + "\' onclick=\"clicked(\'" + i + "\')\"><div>" + word + "</div></div>";
 	}
 	//<a href="#"><span class="ada">Washington stimulates economic growth </span>Read me</a>
 	for (var i = 0; i < trs.length; i++) {
@@ -127,7 +127,6 @@ function createNewGame() {
 function clicked(value) {
 	if (spyMasterMode) {
 		//spymaster mode
-		//document.getElementById(value).style.backgroundColor = COLOR_GREEN;
         document.getElementById(value).innerHTML="";
 	} else {
 		//guessers mode
@@ -195,13 +194,25 @@ function updateScore() {
 
 function spyMaster() {
 	//TODO: randomize or organize tiles for easier comparing
-	spyMasterMode = true;
-	for (var i = 0; i < NUMBER_OF_WORDS; i++) {
-		document.getElementById(i).style.backgroundColor = teams[i];
-		if (teams[i] == "black") {
-			document.getElementById(i).style.color = "white";
-		}
-	}
+    if (spyMasterMode){
+        spyMasterMode = false;
+        document.getElementById("spymaster").innerHTML="Norādes";
+        for (var i = 0; i < NUMBER_OF_WORDS; i++) {
+            if(document.getElementById(i).textContent)
+            {
+                document.getElementById(i).style.backgroundColor = "white";
+            }
+        }
+    }else{
+        spyMasterMode = true;
+        document.getElementById("spymaster").innerHTML="Spēle";
+        for (var i = 0; i < NUMBER_OF_WORDS; i++) {
+            document.getElementById(i).style.backgroundColor = teams[i];
+            if (teams[i] == "black") {
+                document.getElementById(i).style.color = "white";
+            }
+        }
+    }
 }
 
 function shuffle(array) {
