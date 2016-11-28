@@ -4,6 +4,7 @@ Notes:
 'seedrandom' is also imported from html. it gives deterministic random #s based on a seed set in fire()
 */
 
+document.body.requestFullscreen();
 
 var wordsSelected = [];
 var teams = [];
