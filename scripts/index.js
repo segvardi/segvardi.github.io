@@ -62,6 +62,7 @@ function fire() {
 	//fire new board
 	updateScore();
 	createNewGame();
+	document.getElementById("spymaster").innerHTML="Spēle";
 }
 
 //not used, but probably useful at some point
@@ -126,7 +127,7 @@ function createNewGame() {
 function clicked(value) {
 	if (spyMasterMode) {
 		//spymaster mode
-        document.getElementById(value).innerHTML="";
+        	document.getElementById(value).innerHTML="";
 	} else {
 		//guessers mode
 		var word = wordsSelected[value];
