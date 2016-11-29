@@ -14,6 +14,16 @@ html {
 button, input, span#first {
 	font-size : 1.3em;	
 }
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3em;
+    margin: 4px 2px;
+}
 
 #board {
 	width: 100%;
@@ -21,7 +31,7 @@ button, input, span#first {
 	bottom : 5px;
 	left : 2%;
 	right : 1%;
-	top : 48px;
+	top : 80px;
 }
 
 #board div.row {
