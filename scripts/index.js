@@ -62,7 +62,7 @@ function fire() {
 	//fire new board
 	updateScore();
 	createNewGame();
-	document.getElementById("spymaster").innerHTML="Spēle";
+	document.getElementById("spymaster").innerHTML="Norādes";
 }
 
 //not used, but probably useful at some point
