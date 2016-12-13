@@ -168,10 +168,10 @@ function updateScore() {
 	} else {*/
 		$('div.word').each(function() {
 			var color = $(this).css('background-color');
-			if (color === 'rgb(0, 238, 238)') {
+			if (color === 'rgb(0, 238, 238)' && $(this).text() == "") {
 				blueScore--;
 			}
-			if (color === 'rgb(255, 0, 0)') {
+			if (color === 'rgb(255, 0, 0)' && $(this).text() == "") {
 				redScore--;
 			}
 		});
