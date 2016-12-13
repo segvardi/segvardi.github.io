@@ -1,2 +1,2 @@
-# segvards.github.io
-Segvārds
+# segvardi.github.io
+Segvārdi
