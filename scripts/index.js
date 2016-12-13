@@ -97,7 +97,7 @@ function createNewGame() {
 	}
 
 	// one extra for one of the teams
-	if (Math.floor(Math.random() * data.length) % 2 === 0) {
+	if (Math.floor(Math.random() * sessionData.length) % 2 === 0) {
 		teams.push(COLOR_RED);
 		// document.getElementById("team").style.color = COLOR_RED;
 		// document.getElementById("team").innerHTML = "RED";
