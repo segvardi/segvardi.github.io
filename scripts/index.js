@@ -30,6 +30,11 @@ $("#gameMode").change(function() {
 $("#seed").val(Math.floor(Math.random() * 1000));
 fire();
 
+function newgame()
+{
+	$("#seed").val(Math.floor(Math.random() * 1000));
+	fire();	
+}
 function fire() {
 	//get seed and set the seed for randomizer
 	var seed = document.getElementById("seed").value;
