@@ -153,7 +153,7 @@ function clicked(value) {
 function updateScore() {
 	var blueScore = 9;
 	var redScore = 9;
-	if (spyMasterMode) {
+	/*if (spyMasterMode) {
 		blueScore = 0;
 		redScore = 0;
 		$('div.word').each(function() {
@@ -165,7 +165,7 @@ function updateScore() {
 				redScore++;
 			}
 		});
-	} else {
+	} else {*/
 		$('div.word').each(function() {
 			var color = $(this).css('background-color');
 			if (color === 'rgb(0, 238, 238)') {
@@ -181,7 +181,7 @@ function updateScore() {
 		} else {
 			redScore--;
 		}
-	}
+	//}
 	$('#redScore').text(redScore);
 	$('#blueScore').text(blueScore);
 	if(redScore === 0){
